@@ -1,5 +1,5 @@
 # LocalFileInclusion
- i bult this tool while i was testing a site 
+ i built this tool while i was testing a site 
 as DOING IT ONCE COOL, DOING IT TWICE SHAME ON ME.
 # Screen Shots
 <img src="https://i.ibb.co/0m2Pbpw/lfi.png" alt="LFI" border="0">
